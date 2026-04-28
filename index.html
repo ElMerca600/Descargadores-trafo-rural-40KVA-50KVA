@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SurgeSelector 13.2 kV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>⚡ SurgeSelector 13.2 kV</h1>
+    <p>Selección de descargadores de sobretensión para transformadores rurales</p>
+  </header>
+
+  <main>
+    <section class="form-card">
+      <h2>Parámetros de entrada</h2>
+
+      <div class="field">
+        <label for="isocerauno">Nivel isoceráunico (días tormenta/año):</label>
+        <select id="isocerauno">
+          <option value="">-- Seleccionar --</option>
+          <option value="bajo">Bajo (0 – 20 días/año)</option>
+          <option value="medio">Medio (20 – 40 días/año)</option>
+          <option value="alto">Alto (40 – 60 días/año)</option>
+          <option value="muy_alto">Muy Alto (&gt; 60 días/año)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="potencia">Potencia del transformador:</label>
+        <select id="potencia">
+          <option value="">-- Seleccionar --</option>
+          <option value="40">40 kVA</option>
+          <option value="50">50 kVA</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="neutro">Tratamiento del centro de estrella del alimentador:</label>
+        <select id="neutro">
+          <option value="">-- Seleccionar --</option>
+          <option value="solido">Sólido a tierra</option>
+          <option value="impedancia">Impedancia (resistivo o inductivo)</option>
+          <option value="aislado">Aislado (sin conexión a tierra)</option>
+          <option value="resonante">Resonante (bobina Petersen)</option>
+        </select>
+      </div>
+
+      <button id="btnSeleccionar" onclick="seleccionar()">Seleccionar descargador</button>
+    </section>
+
+    <section class="result-card" id="resultado" style="display:none;">
+      <h2>📄 Descargador recomendado</h2>
+      <div id="ficha"></div>
+      <div class="justificacion" id="justificacion"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Basado en normas IEC 60099-4 / IEEE C62.11 · Tensión de sistema: 13,2 kV · 50 Hz</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
