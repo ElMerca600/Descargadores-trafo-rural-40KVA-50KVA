@@ -12,8 +12,8 @@ Brindar una guía rápida y práctica para la correcta selección de descargador
 
 ## 🧠 Alcance
 Esta aplicación está limitada a:
-- Transformadores rurales de 40 kVA y 50 kVA
-- Condiciones típicas de redes de distribución rural
+- Transformadores rurales de 40 kVA y 50 kVA para instalaciones de pozo de producción para bomba PCP.
+- Condiciones típicas de redes de distribución rural.
 
 No contempla otros niveles de potencia ni configuraciones especiales.
 
