@@ -91,6 +91,19 @@ const justIso = {
   muy_alto: "Zona de actividad extrema (> 60 días/año): In = 20 kA y clase C2H (Heavy Duty) para soportar descargas repetidas de alta energía."
 };
 
+function escapeHTML(str) {
+  if (!str) return "";
+  return String(str).replace(/[&<>'"]/g,
+    tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag] || tag)
+  );
+}
+
 // ─── Función principal ─────────────────────────
 function seleccionar() {
   const iso     = document.getElementById("isocerauno").value;
@@ -154,7 +167,7 @@ function seleccionar() {
     </div>
     <div class="param">
       <div class="label">Aplicación</div>
-      <div class="value">Trafo rural ${pot} kVA · 13,2 kV</div>
+      <div class="value">Trafo rural ${escapeHTML(pot)} kVA · 13,2 kV</div>
     </div>
     <div class="param">
       <div class="label">Cantidad requerida</div>
