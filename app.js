@@ -172,3 +172,10 @@ function seleccionar() {
   seccion.style.display = "block";
   seccion.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnSeleccionar = document.getElementById('btnSeleccionar');
+  if (btnSeleccionar) {
+    btnSeleccionar.addEventListener('click', seleccionar);
+  }
+});
