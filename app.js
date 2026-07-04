@@ -92,13 +92,31 @@ const justIso = {
 };
 
 // ─── Función principal ─────────────────────────
+const DOM = {
+  isocerauno: null,
+  potencia: null,
+  neutro: null,
+  resultado: null,
+  ficha: null,
+  justificacion: null,
+};
+
 function seleccionar() {
-  const iso     = document.getElementById("isocerauno").value;
-  const pot     = document.getElementById("potencia").value;
-  const neutro  = document.getElementById("neutro").value;
-  const seccion = document.getElementById("resultado");
-  const ficha   = document.getElementById("ficha");
-  const just    = document.getElementById("justificacion");
+  if (!DOM.isocerauno) {
+    DOM.isocerauno = document.getElementById("isocerauno");
+    DOM.potencia = document.getElementById("potencia");
+    DOM.neutro = document.getElementById("neutro");
+    DOM.resultado = document.getElementById("resultado");
+    DOM.ficha = document.getElementById("ficha");
+    DOM.justificacion = document.getElementById("justificacion");
+  }
+
+  const iso     = DOM.isocerauno.value;
+  const pot     = DOM.potencia.value;
+  const neutro  = DOM.neutro.value;
+  const seccion = DOM.resultado;
+  const ficha   = DOM.ficha;
+  const just    = DOM.justificacion;
 
   // Validación
   if (!iso || !pot || !neutro) {
