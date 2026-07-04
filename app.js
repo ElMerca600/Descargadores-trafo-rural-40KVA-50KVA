@@ -172,3 +172,7 @@ function seleccionar() {
   seccion.style.display = "block";
   seccion.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+// Export for testing
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+  module.exports = { seleccionar };
+}

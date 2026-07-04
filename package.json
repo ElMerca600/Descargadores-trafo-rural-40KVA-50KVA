@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Herramienta desarrollada para seleccionar descargadores de sobretensión específicamente para transformadores rurales de:",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElMerca600/Descargadores-trafo-rural-40KVA-50KVA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ElMerca600/Descargadores-trafo-rural-40KVA-50KVA/issues"
+  },
+  "homepage": "https://github.com/ElMerca600/Descargadores-trafo-rural-40KVA-50KVA#readme",
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "jsdom": "^29.1.1"
+  }
+}
