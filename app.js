@@ -171,4 +171,7 @@ function seleccionar() {
 
   seccion.style.display = "block";
   seccion.scrollIntoView({ behavior: "smooth", block: "start" });
+
 }
+
+if (typeof module !== 'undefined' && module.exports) { module.exports = { seleccionar, db, justNeutro, justIso }; }
