@@ -10,6 +10,9 @@
 // ─── Tensión máxima de fase (Um fase-tierra) ─
 // Um del sistema = 15 kV → Um fase-tierra = 8,66 kV
 
+// ─── Constantes globales ───────────────────────
+const TRAFO_BIL_KV = 95; // Nivel de Aislación Trafo (BIL) en kV pico
+
 // ─── Base de datos de descargadores ──────────
 // Uc  = Tensión de servicio continuo (kV ef)
 // Un  = Tensión nominal (kV ef)
@@ -146,11 +149,11 @@ function seleccionar() {
     </div>
     <div class="param">
       <div class="label">Nivel de Aislación Trafo (BIL)</div>
-      <div class="value">95 kV pico (1,2/50 µs)</div>
+      <div class="value">${TRAFO_BIL_KV} kV pico (1,2/50 µs)</div>
     </div>
     <div class="param">
       <div class="label">Margen de Protección</div>
-      <div class="value">${(((95 - d.Up) / 95) * 100).toFixed(1)} %</div>
+      <div class="value">${(((TRAFO_BIL_KV - d.Up) / TRAFO_BIL_KV) * 100).toFixed(1)} %</div>
     </div>
     <div class="param">
       <div class="label">Aplicación</div>
